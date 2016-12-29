@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE dictionary SYSTEM "file://localhost/System/Library/DTDs/sdef.dtd">
+
+
+	<!-- declare the namespace for using XInclude so we can include the standard suite -->
+<dictionary xmlns:xi="http://www.w3.org/2003/XInclude">
+
+		<!-- use XInclude to include the standard suite -->
+	<xi:include href="file:///System/Library/ScriptingDefinitions/CocoaStandard.sdef" xpointer="xpointer(/dictionary/suite)"/>
+
+    <suite name="Scriptable Test Suite" code="TSST" description="Scriptable Test suite.">
+        
+        <class name="application" code="capp" description="An application's top level scripting object.">
+            <cocoa class="NSApplication"/>
+            
+            <element type="testmodel" access="rw">
+                <cocoa key="testmodelkey"/>
+            </element>
+        </class>
+        
+        <command name="testMethod" code="TestMeth">
+            <direct-parameter description="Test" type="text"/>
+        </command>
+    
+        <class name="testmodel" code="TmOd" description="The Test Model">
+            <cocoa class="TestModel"/>
+
+            <property name="name" code="PnAm" type="text" access="r"
+                description="The full title of the model.">
+                <cocoa key="testString"/>
+            </property>
+
+            <responds-to command="testMethod">
+                <cocoa method="testCallMethod:"/>
+            </responds-to>
+            
+        </class>
+    </suite>
+
+</dictionary>
