@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "BB9F1000289D8C5773A13001CA660A3E1B3975FF",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "58ACC157CB2A51B0D4BB0891DA3CA86254205BFE" : 9223372036854775807,
+    "BB9F1000289D8C5773A13001CA660A3E1B3975FF" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "5C7C0D42-6534-42B6-BFEC-6B9C4DA7780E",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "58ACC157CB2A51B0D4BB0891DA3CA86254205BFE" : "",
+    "BB9F1000289D8C5773A13001CA660A3E1B3975FF" : "AppleScriptTest\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "ScriptTest",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "ScriptTest\/ScriptTest.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "git.quartett-mobile.de:stanciu\/PipaAppium.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "58ACC157CB2A51B0D4BB0891DA3CA86254205BFE"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/NickAtGit\/AppleScriptTest",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "BB9F1000289D8C5773A13001CA660A3E1B3975FF"
+    }
+  ]
+}

@@ -7,25 +7,25 @@
 - (instancetype)init
 {
     self.objectID = [[NSUUID UUID] UUIDString];
-    self.testString = @"TEST";
+    self.title = @"TEST";
     return self;
 }
     
 - (NSString *)testCallMethod:(NSScriptCommand *)command
 {
     NSLog(@"%@", command.evaluatedReceivers);
-    self.testString = @"modified string";
+    self.title = @"modified string";
     return @"TestMethodCalled";
 }
     
 - (NSScriptObjectSpecifier *)objectSpecifier
 {
-    NSScriptObjectSpecifier *containerRef = nil;
-    NSScriptObjectSpecifier *specifier = [[NSNameSpecifier alloc]
-                                          initWithContainerClassDescription:[NSScriptClassDescription classDescriptionForClass:[NSApp class]]
-                                          containerSpecifier:containerRef
-                                          key:@"testmodelkey"
-                                          name:self.objectID];
+    NSScriptClassDescription *classDescription = (NSScriptClassDescription *) [[NSApplication sharedApplication] classDescription];
+    
+    NSUniqueIDSpecifier *specifier = [[NSUniqueIDSpecifier alloc] initWithContainerClassDescription:classDescription
+                                                                                 containerSpecifier:nil
+                                                                                                key:@"testmodel"
+                                                                                           uniqueID:self.objectID];
     
     return specifier;
 }

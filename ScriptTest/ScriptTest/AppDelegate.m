@@ -1,10 +1,8 @@
 
 
 #import "AppDelegate.h"
-#import "TestModel.h"
 
 @interface AppDelegate ()
-@property (nonatomic, strong) TestModel *testModel;
 @end
 
 @implementation AppDelegate
@@ -13,6 +11,7 @@
     // Insert code here to initialize your application
     
     self.testModel = [[TestModel alloc] init];
+    self.models = @[self.testModel];
 }
 
 
@@ -22,7 +21,8 @@
     
 - (BOOL)application:(NSApplication *)sender delegateHandlesKey:(NSString *)key
 {
-    return [key isEqual:@"testmodelkey"];
+    NSLog(@"THE KEY: %@", key);
+    return [@"models" isEqualToString:key];
 }
 
 
