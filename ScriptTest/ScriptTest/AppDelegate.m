@@ -1,29 +1,38 @@
 
 
 #import "AppDelegate.h"
-#import "TestModel.h"
 
 @interface AppDelegate ()
-@property (nonatomic, strong) TestModel *testModel;
 @end
 
 @implementation AppDelegate
-
-- (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
-    // Insert code here to initialize your application
     
+@synthesize testModel = _testModel;
+
+- (void)applicationDidFinishLaunching:(NSNotification *)aNotification
+{
     self.testModel = [[TestModel alloc] init];
+    self.testModels = @[self.testModel];
 }
 
 
-- (void)applicationWillTerminate:(NSNotification *)aNotification {
-    // Insert code here to tear down your application
+- (void)applicationWillTerminate:(NSNotification *)aNotification
+{
 }
     
 - (BOOL)application:(NSApplication *)sender delegateHandlesKey:(NSString *)key
 {
-    return [key isEqual:@"testmodelkey"];
+    return [key isEqual:@"testModels"];
+}
+    
+- (TestModel *)testModel
+{
+    return _testModel;
 }
 
+- (void)setTestModel:(TestModel *)testModel
+{
+    _testModel = testModel;
+}
 
 @end

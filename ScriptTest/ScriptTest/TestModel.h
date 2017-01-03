@@ -2,8 +2,9 @@
 
 #import <Foundation/Foundation.h>
 
-@interface TestModel : NSScriptCommand
-@property (nonatomic, strong) NSString *objectID;
-@property (nonatomic, strong) NSString *testString;
-- (NSString *)testCallMethod:(NSScriptCommand *)command;
+@interface TestModel : NSObject
+- (void)testCallMethod:(NSScriptCommand *)command;
+- (void)setTitle:(NSString *)title;
+- (NSString *)title;
+- (NSString *)objectID;
 @end
